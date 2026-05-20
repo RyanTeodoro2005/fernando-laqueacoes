@@ -1,0 +1,113 @@
+---
+import { SITE } from '../lib/utils';
+
+const links = [
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#servicos', label: 'Serviços' },
+  { href: '#galeria', label: 'Galeria' },
+  { href: '#processo', label: 'Processo' },
+  { href: '#contato', label: 'Contato' },
+];
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 inset-x-0 z-40 transition-all duration-500 py-5"
+>
+  <div class="container-x flex items-center justify-between">
+    <a href="#top" class="group flex items-center gap-3">
+      <span
+        class="block w-9 h-9 rounded-full bg-gradient-to-br from-gold to-gold-dark border border-gold-light/30 grid place-items-center text-ink-900 font-display font-bold text-lg group-hover:rotate-12 transition-transform duration-500"
+      >
+        F
+      </span>
+      <span class="hidden sm:inline-block font-display text-base tracking-tight">
+        Fernando <span class="text-gold">Laqueações</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class="text-cream-50/70 hover:text-gold transition-colors duration-300 relative group"
+          >
+            {l.label}
+            <span class="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-500" />
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label="Alternar tema"
+        class="w-10 h-10 grid place-items-center rounded-full border border-cream-50/20 hover:border-gold text-cream-50 hover:text-gold transition-all duration-300"
+      >
+        <!-- Moon (visible in light mode) -->
+        <svg id="theme-icon-moon" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <!-- Sun (visible in dark mode) -->
+        <svg id="theme-icon-sun" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+      </button>
+
+      <a
+        href={SITE.whatsappLink('Olá! Gostaria de um orçamento.')}
+        target="_blank"
+        rel="noopener"
+        class="hidden md:inline-flex items-center gap-2 text-sm border border-cream-50/20 hover:border-gold rounded-full px-5 py-2.5 text-cream-50 hover:text-gold transition-all duration-300 magnetic-btn"
+      >
+        <span class="w-2 h-2 rounded-full bg-gold animate-pulse" />
+        Solicitar orçamento
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('site-header');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 30) {
+        header.classList.add('backdrop-blur-xl', 'bg-ink-900/70', 'border-b', 'border-cream-50/5', 'py-3');
+        header.classList.remove('py-5');
+      } else {
+        header.classList.remove('backdrop-blur-xl', 'bg-ink-900/70', 'border-b', 'border-cream-50/5', 'py-3');
+        header.classList.add('py-5');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const moonIcon = document.getElementById('theme-icon-moon');
+  const sunIcon = document.getElementById('theme-icon-sun');
+
+  function syncThemeIcons() {
+    const isLight = document.documentElement.classList.contains('light');
+    if (isLight) {
+      moonIcon?.classList.remove('hidden');
+      sunIcon?.classList.add('hidden');
+    } else {
+      moonIcon?.classList.add('hidden');
+      sunIcon?.classList.remove('hidden');
+    }
+  }
+
+  themeToggle?.addEventListener('click', () => {
+    const isLight = document.documentElement.classList.toggle('light');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    syncThemeIcons();
+  });
+
+  syncThemeIcons();
+</script>

@@ -1,0 +1,70 @@
+---
+import { SITE } from '../lib/utils';
+const year = new Date().getFullYear();
+---
+
+<footer class="relative border-t border-cream-50/8 pt-20 pb-10 overflow-hidden">
+  <div class="container-x">
+    <div class="grid md:grid-cols-3 gap-12 mb-16">
+      <div>
+        <a href="#top" class="flex items-center gap-3 mb-6">
+          <span
+            class="block w-10 h-10 rounded-full bg-gradient-to-br from-gold to-gold-dark grid place-items-center text-ink-900 font-display font-bold"
+          >
+            F
+          </span>
+          <span class="font-display text-lg">
+            Fernando <span class="text-gold">Laqueações</span>
+          </span>
+        </a>
+        <p class="text-cream-50/60 text-sm leading-relaxed max-w-xs">
+          Laqueação, restauração e marcenaria com cuidado artesanal em toda São Paulo.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xs uppercase tracking-[0.3em] text-gold mb-5">Navegação</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#sobre" class="text-cream-50/60 hover:text-gold transition-colors">Sobre</a></li>
+          <li><a href="#servicos" class="text-cream-50/60 hover:text-gold transition-colors">Serviços</a></li>
+          <li><a href="#galeria" class="text-cream-50/60 hover:text-gold transition-colors">Galeria</a></li>
+          <li><a href="#processo" class="text-cream-50/60 hover:text-gold transition-colors">Processo</a></li>
+          <li><a href="#contato" class="text-cream-50/60 hover:text-gold transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs uppercase tracking-[0.3em] text-gold mb-5">Contato</h4>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href={SITE.whatsappLink()} target="_blank" rel="noopener" class="text-cream-50/60 hover:text-gold transition-colors">
+              {SITE.whatsappDisplay}
+            </a>
+          </li>
+          <li>
+            <a href={`mailto:${SITE.email}`} class="text-cream-50/60 hover:text-gold transition-colors break-all">
+              {SITE.email}
+            </a>
+          </li>
+          <li class="text-cream-50/60">
+            {SITE.address}<br />
+            {SITE.city}/{SITE.region}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-cream-50/8 flex flex-col md:flex-row gap-4 justify-between items-center text-xs text-cream-50/40">
+      <span>© {year} Fernando Laqueações. Todos os direitos reservados.</span>
+      <span>Feito com cuidado em São Paulo.</span>
+    </div>
+  </div>
+
+  <!-- Big background type -->
+  <div
+    aria-hidden="true"
+    class="absolute -bottom-16 left-1/2 -translate-x-1/2 text-display text-[20vw] font-light text-stroke leading-none whitespace-nowrap pointer-events-none select-none opacity-30"
+  >
+    Obrigado!
+  </div>
+</footer>
