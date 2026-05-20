@@ -1,0 +1,363 @@
+---
+import { SITE } from '../lib/utils';
+---
+
+<section id="contato" class="relative py-32 md:py-40 overflow-hidden">
+  <!-- Decorative background -->
+  <div class="absolute inset-0 -z-10 opacity-50">
+    <div
+      class="absolute top-0 right-0 w-[60vw] h-[60vw] rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.12),transparent_60%)] blur-3xl"
+    ></div>
+    <div
+      class="absolute bottom-0 left-0 w-[40vw] h-[40vw] rounded-full bg-[radial-gradient(circle,rgba(139,90,60,0.1),transparent_60%)] blur-3xl"
+    ></div>
+  </div>
+
+  <div class="container-x grid lg:grid-cols-2 gap-16 lg:gap-24">
+    <div data-reveal>
+      <div class="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold mb-6">
+        <span class="w-12 h-px bg-gold"></span>
+        Vamos conversar
+      </div>
+      <h2 class="text-display text-5xl md:text-7xl font-light leading-[0.95] mb-8">
+        Tem um móvel <br />
+        com história? <br />
+        <span class="italic gold-shine">Conta pra gente.</span>
+      </h2>
+
+      <p class="text-cream-50/70 text-lg leading-relaxed mb-12 max-w-md">
+        Atendimento direto, orçamento sem compromisso e visita técnica em
+        toda a cidade de São Paulo.
+      </p>
+
+      <div class="space-y-6">
+        <a
+          href={SITE.whatsappLink()}
+          target="_blank"
+          rel="noopener"
+          class="group flex items-center gap-5 p-5 rounded-xl border border-cream-50/10 hover:border-gold/40 hover:bg-cream-50/[0.02] transition-all duration-500"
+        >
+          <div class="w-12 h-12 rounded-full bg-[#25D366]/10 grid place-items-center group-hover:bg-[#25D366]/20 transition-colors">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-[#25D366]" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="text-xs uppercase tracking-widest text-cream-50/50">
+              WhatsApp
+            </div>
+            <div class="text-lg font-medium group-hover:text-gold transition-colors">
+              {SITE.whatsappDisplay}
+            </div>
+          </div>
+          <span class="text-cream-50/40 group-hover:text-gold group-hover:translate-x-1 transition-all">→</span>
+        </a>
+
+        <a
+          href={`mailto:${SITE.email}`}
+          class="group flex items-center gap-5 p-5 rounded-xl border border-cream-50/10 hover:border-gold/40 hover:bg-cream-50/[0.02] transition-all duration-500"
+        >
+          <div class="w-12 h-12 rounded-full bg-gold/10 grid place-items-center group-hover:bg-gold/20 transition-colors">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-5 h-5 text-gold"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="text-xs uppercase tracking-widest text-cream-50/50">E-mail</div>
+            <div class="text-lg font-medium group-hover:text-gold transition-colors break-all">
+              {SITE.email}
+            </div>
+          </div>
+          <span class="text-cream-50/40 group-hover:text-gold group-hover:translate-x-1 transition-all">→</span>
+        </a>
+
+        <div class="flex items-center gap-5 p-5 rounded-xl border border-cream-50/10">
+          <div class="w-12 h-12 rounded-full bg-wood/20 grid place-items-center">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-5 h-5 text-wood-light"
+            >
+              <path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 1 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="text-xs uppercase tracking-widest text-cream-50/50">Localização</div>
+            <div class="text-lg font-medium">
+              {SITE.address} · {SITE.city}/{SITE.region}
+            </div>
+            <div class="text-xs text-cream-50/40 mt-1">Atendemos toda a cidade</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form
+      data-reveal
+      id="contato-form"
+      class="relative p-8 md:p-10 rounded-2xl bg-cream-50/[0.02] border border-cream-50/10 backdrop-blur"
+    >
+      <h3 class="text-display text-3xl font-light mb-8">
+        Envie uma <span class="italic gold-shine">mensagem</span>
+      </h3>
+
+      <div class="space-y-5">
+        <label class="block">
+          <span class="text-xs uppercase tracking-widest text-cream-50/50 mb-2 block">
+            Nome
+          </span>
+          <input
+            type="text"
+            name="nome"
+            required
+            class="w-full bg-transparent border-b border-cream-50/15 focus:border-gold py-3 outline-none transition-colors text-cream-50 placeholder:text-cream-50/30"
+            placeholder="Seu nome completo"
+          />
+        </label>
+
+        <label class="block">
+          <span class="text-xs uppercase tracking-widest text-cream-50/50 mb-2 block">
+            Telefone
+          </span>
+          <input
+            type="tel"
+            name="telefone"
+            required
+            class="w-full bg-transparent border-b border-cream-50/15 focus:border-gold py-3 outline-none transition-colors text-cream-50 placeholder:text-cream-50/30"
+            placeholder="(11) 9 0000-0000"
+          />
+        </label>
+
+        <label class="block">
+          <span class="text-xs uppercase tracking-widest text-cream-50/50 mb-2 block">
+            E-mail
+          </span>
+          <input
+            type="email"
+            name="email"
+            class="w-full bg-transparent border-b border-cream-50/15 focus:border-gold py-3 outline-none transition-colors text-cream-50 placeholder:text-cream-50/30"
+            placeholder="seu@email.com"
+          />
+        </label>
+
+        <label class="block">
+          <span class="text-xs uppercase tracking-widest text-cream-50/50 mb-2 block">
+            Mensagem
+          </span>
+          <textarea
+            name="mensagem"
+            rows="4"
+            required
+            class="w-full bg-transparent border-b border-cream-50/15 focus:border-gold py-3 outline-none transition-colors text-cream-50 placeholder:text-cream-50/30 resize-none"
+            placeholder="Conte-nos sobre o móvel ou serviço..."></textarea>
+        </label>
+
+        <button
+          type="submit"
+          id="contato-btn"
+          class="relative overflow-hidden mt-4 w-full bg-gold hover:bg-gold-light text-ink-900 rounded-full py-4 font-medium tracking-tight transition-colors group inline-flex items-center justify-center gap-2"
+        >
+          <span class="relative z-10 inline-flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+            <span id="btn-label">Enviar via WhatsApp</span>
+          </span>
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+          ></span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Success Popup Modal -->
+  <div
+    id="success-modal"
+    class="fixed inset-0 z-[9999] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500"
+  >
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-ink-900/80 backdrop-blur-sm"></div>
+
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-[10000]"></canvas>
+
+    <!-- Modal Content -->
+    <div
+      id="success-modal-content"
+      class="relative z-[10001] w-full max-w-md p-10 rounded-3xl bg-ink-900 border border-gold/30 shadow-2xl shadow-gold/10 text-center scale-90 transition-transform duration-500 overflow-visible"
+    >
+      <!-- Checkmark animation -->
+      <div class="mx-auto w-20 h-20 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center mb-6 animate-bounce-in">
+        <svg class="w-10 h-10 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path class="checkmark-path" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <!-- Text -->
+      <h3 class="text-display text-3xl font-light text-cream-50 mb-3 overflow-visible">
+        Mensagem <span class="italic gold-shine">enviada</span>!
+      </h3>
+      <p class="text-cream-50/70 text-base leading-relaxed mb-8">
+        Estamos abrindo o WhatsApp com sua mensagem pronta. Em instantes responderemos por lá!
+      </p>
+
+      <!-- Close button -->
+      <button
+        id="close-modal-btn"
+        class="relative overflow-hidden w-full bg-gold hover:bg-gold-light text-ink-900 rounded-full py-3.5 font-medium tracking-tight transition-colors group"
+      >
+        <span class="relative z-10">Fechar</span>
+        <span
+          class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+        ></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes bounce-in {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  .checkmark-path {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: draw-check 0.6s 0.3s ease forwards;
+  }
+  @keyframes draw-check {
+    to { stroke-dashoffset: 0; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contato-form') as HTMLFormElement;
+    const modal = document.getElementById('success-modal')!;
+    const modalContent = document.getElementById('success-modal-content')!;
+    const closeBtn = document.getElementById('close-modal-btn')!;
+    const canvas = document.getElementById('confetti-canvas') as HTMLCanvasElement;
+    const ctx = canvas.getContext('2d')!;
+    let confettiPieces: any[] = [];
+    let animFrame: number | null = null;
+
+    function launchConfetti() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      confettiPieces = [];
+      const colors = ['#c9a961', '#d4af37', '#8b5a3c', '#e8d5a3', '#f0e6cc', '#ffffff', '#ffd700'];
+      for (let i = 0; i < 100; i++) {
+        confettiPieces.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height - canvas.height,
+          w: 4 + Math.random() * 8,
+          h: 6 + Math.random() * 10,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 4,
+          vy: 2 + Math.random() * 4,
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10,
+          opacity: 1,
+        });
+      }
+      animateConfetti();
+    }
+
+    function animateConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let active = false;
+      for (const p of confettiPieces) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.1;
+        p.rot += p.rotSpeed;
+        if (p.y > canvas.height) {
+          p.opacity -= 0.02;
+        }
+        if (p.opacity <= 0) continue;
+        active = true;
+        ctx.save();
+        ctx.globalAlpha = p.opacity;
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rot * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+      if (active) {
+        animFrame = requestAnimationFrame(animateConfetti);
+      } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        animFrame = null;
+      }
+    }
+
+    function showModal() {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100', 'pointer-events-auto');
+      modalContent.classList.remove('scale-90');
+      modalContent.classList.add('scale-100');
+      launchConfetti();
+    }
+
+    function hideModal() {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100', 'pointer-events-auto');
+      modalContent.classList.add('scale-90');
+      modalContent.classList.remove('scale-100');
+      if (animFrame) cancelAnimationFrame(animFrame);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confettiPieces = [];
+    }
+
+    closeBtn.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target === modal.querySelector('.absolute')) {
+        hideModal();
+      }
+    });
+
+    const WHATSAPP_NUMBER = '5511962544005';
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const nome = (formData.get('nome') || '').toString().trim();
+      const telefone = (formData.get('telefone') || '').toString().trim();
+      const email = (formData.get('email') || '').toString().trim();
+      const mensagem = (formData.get('mensagem') || '').toString().trim();
+
+      const lines = [
+        '*Nova mensagem do site - Fernando Laqueacoes*',
+        '',
+        `*Nome:* ${nome}`,
+        `*Telefone:* ${telefone}`,
+      ];
+      if (email) lines.push(`*E-mail:* ${email}`);
+      lines.push('', '*Mensagem:*', mensagem);
+
+      const text = encodeURIComponent(lines.join('\n'));
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+
+      window.open(url, '_blank', 'noopener');
+      form.reset();
+      showModal();
+    });
+  });
+</script>
