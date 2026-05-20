@@ -1,0 +1,68 @@
+---
+const steps = [
+  {
+    n: '01',
+    title: 'Avaliação',
+    desc: 'Visita ou análise por foto: entendemos o estado da peça, expectativa e o melhor caminho.',
+  },
+  {
+    n: '02',
+    title: 'Preparação',
+    desc: 'Lixamento, remoção de tinta antiga, reparo estrutural e preparo da superfície.',
+  },
+  {
+    n: '03',
+    title: 'Aplicação',
+    desc: 'Camadas controladas de fundo, tinta e laca, com tempo de secagem e polimento entre elas.',
+  },
+  {
+    n: '04',
+    title: 'Entrega',
+    desc: 'Acabamento final, montagem e entrega cuidadosa — a peça volta como nova.',
+  },
+];
+---
+
+<section id="processo" class="relative py-32 md:py-40 bg-ink-800/40">
+  <div class="container-x">
+    <div class="text-center max-w-2xl mx-auto mb-20" data-reveal>
+      <div class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold mb-6">
+        <span class="w-12 h-px bg-gold"></span>
+        Como trabalhamos
+        <span class="w-12 h-px bg-gold"></span>
+      </div>
+      <h2 class="text-display text-5xl md:text-6xl font-light leading-[0.95]">
+        Quatro etapas. <br />
+        <span class="italic gold-shine">Zero pressa.</span>
+      </h2>
+    </div>
+
+    <div class="relative grid md:grid-cols-4 gap-8 md:gap-4">
+      <div
+        class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"
+      ></div>
+
+      {
+        steps.map((s, i) => (
+          <div
+            class="relative text-center group"
+            data-reveal
+            style={`transition-delay: ${i * 100}ms;`}
+          >
+            <div class="relative z-10 mx-auto w-20 h-20 rounded-full bg-ink-900 border border-gold/30 grid place-items-center mb-8 group-hover:border-gold transition-all duration-500 group-hover:scale-110">
+              <span class="text-display text-xl text-gold gold-shine">{s.n}</span>
+              <span class="absolute inset-0 rounded-full bg-gold/0 group-hover:bg-gold/10 transition-colors duration-500"></span>
+            </div>
+
+            <h3 class="text-display text-2xl md:text-3xl font-light mb-3">
+              {s.title}
+            </h3>
+            <p class="text-sm text-cream-50/60 leading-relaxed max-w-[220px] mx-auto">
+              {s.desc}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
