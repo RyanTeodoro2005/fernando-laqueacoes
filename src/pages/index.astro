@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Sobre from '../components/Sobre.astro';
+import Processo from '../components/Processo.astro';
+import Contato from '../components/Contato.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import Hero from '../components/Hero.tsx';
+import Servicos from '../components/Servicos.tsx';
+import Galeria from '../components/Galeria.tsx';
+---
+
+<Layout>
+  <Header />
+
+  <main>
+    <Hero client:load />
+    <Sobre />
+    <Servicos client:visible />
+    <Galeria client:visible />
+    <Processo />
+    <Contato />
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+</Layout>
