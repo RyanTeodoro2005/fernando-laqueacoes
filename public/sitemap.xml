@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://fernando-laqueacoes.netlify.app/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://fernando-laqueacoes.netlify.app/images/galeria/laqueacao.png</image:loc>
+      <image:title>Laqueação de Móveis em São Paulo</image:title>
+      <image:caption>Serviço profissional de laqueação de móveis em São Paulo - Fernando Laqueações</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fernando-laqueacoes.netlify.app/images/galeria/restauracao.png</image:loc>
+      <image:title>Restauração de Móveis Antigos</image:title>
+      <image:caption>Restauração profissional de móveis antigos respeitando a história original</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fernando-laqueacoes.netlify.app/images/galeria/pintura-moveis.png</image:loc>
+      <image:title>Pintura de Móveis</image:title>
+      <image:caption>Pintura profissional de móveis com preparação completa da superfície</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fernando-laqueacoes.netlify.app/images/galeria/portao.jpg</image:loc>
+      <image:title>Restauração de Portões de Madeira</image:title>
+      <image:caption>Portões de madeira e de garagem renovados com acabamento resistente ao tempo</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://fernando-laqueacoes.netlify.app/#sobre</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://fernando-laqueacoes.netlify.app/#servicos</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fernando-laqueacoes.netlify.app/#galeria</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://fernando-laqueacoes.netlify.app/#processo</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://fernando-laqueacoes.netlify.app/#contato</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
