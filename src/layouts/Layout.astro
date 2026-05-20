@@ -1,0 +1,218 @@
+---
+import '../styles/global.css';
+import { SITE } from '../lib/utils';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${SITE.name} — Laqueação e Restauração de Móveis em ${SITE.city}`,
+  description = 'Laqueação, pintura e restauração de móveis em toda São Paulo. Marcenaria, montagem e restauração de portões. Trabalho artesanal premium com acabamento impecável.',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="laqueação de móveis são paulo, laqueamento de móveis sp, restauração de móveis são paulo, pintura de móveis sp, móveis laqueados, marceneiro são paulo, laqueador de móveis, restauração de portões de madeira, restauração de portão de garagem, móveis antigos restaurados, laca branca, laca preta, móveis de madeira pintados, marcenaria são paulo, móveis sob medida, restaurador de móveis, pintura automotiva em móveis, polimento de móveis, acabamento em móveis, fernando laqueações, fernando laqueacoes, móvel laqueado branco, móvel laqueado preto, restauro de móveis antigos, restauração de cômoda, restauração de mesa, restauração de cadeira, móveis de demolição, marcenaria fina, laqueado fosco, laqueado brilhante, móveis pintados profissional, restaurar móvel antigo, pintura de portão de madeira, móveis vintage" />
+    <meta name="author" content={SITE.name} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="BR-SP" />
+    <meta name="geo.placename" content="São Paulo" />
+    <meta name="geo.position" content="-23.5505;-46.6333" />
+    <meta name="ICBM" content="-23.5505, -46.6333" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/images/galeria/laqueacao.png', Astro.site).toString()} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/images/galeria/laqueacao.png', Astro.site).toString()} />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0d0b08" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- LocalBusiness Schema (rich) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+      '@id': canonical + '#business',
+      name: SITE.name,
+      alternateName: ['Fernando Laqueacoes', 'Laqueacoes Fernando', 'Fernando Laqueador'],
+      image: new URL('/images/galeria/laqueacao.png', Astro.site).toString(),
+      logo: new URL('/favicon.svg', Astro.site).toString(),
+      telephone: SITE.whatsappDisplay,
+      email: SITE.email,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: SITE.address,
+        addressLocality: SITE.city,
+        addressRegion: SITE.region,
+        postalCode: '00000-000',
+        addressCountry: 'BR',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: -23.5505,
+        longitude: -46.6333,
+      },
+      areaServed: [
+        { '@type': 'City', name: 'São Paulo' },
+        { '@type': 'AdministrativeArea', name: 'Grande São Paulo' },
+        { '@type': 'AdministrativeArea', name: 'ABC Paulista' },
+      ],
+      url: canonical,
+      description,
+      priceRange: '$$',
+      currenciesAccepted: 'BRL',
+      paymentAccepted: 'Cash, Credit Card, Pix, Bank Transfer',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '08:00',
+          closes: '18:00',
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: 'Saturday',
+          opens: '08:00',
+          closes: '13:00',
+        },
+      ],
+      sameAs: [`https://wa.me/${SITE.whatsapp}`],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Serviços de Laqueação e Restauração',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Laqueação de Móveis', description: 'Acabamento em laca fosca, brilhante ou semi-brilho com alta durabilidade.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Restauração de Móveis Antigos', description: 'Recuperação de móveis novos e antigos respeitando a história original.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pintura de Móveis', description: 'Mudança total de cor com preparação completa da superfície.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Marcenaria', description: 'Reparos, ajustes e pequenas confecções sob medida.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Montagem de Móveis', description: 'Montagem profissional e organizada de todos os tipos de mobiliário.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Restauração de Portões', description: 'Portões de madeira e de garagem renovados com acabamento resistente ao tempo.' } },
+        ],
+      },
+    })} />
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Quanto custa laquear um móvel em São Paulo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'O valor da laqueação varia de acordo com o tamanho do móvel, tipo de acabamento (fosco, brilhante ou semi-brilho) e estado da peça. Solicite um orçamento gratuito pelo WhatsApp.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Vocês fazem restauração de móveis antigos?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sim. Restauramos móveis antigos respeitando a história original da peça, com técnicas que recuperam a estrutura, acabamento e detalhes originais.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Atendem em toda São Paulo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sim, atendemos a cidade de São Paulo, Grande São Paulo e ABC Paulista. Oferecemos retirada e entrega dos móveis.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Que tipo de acabamento de laca vocês oferecem?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oferecemos acabamentos em laca fosca, brilhante e semi-brilho, em qualquer cor, com alta durabilidade e uniformidade.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Vocês restauram portões de madeira e de garagem?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sim, restauramos portões de madeira e portões de garagem, com lixamento, tratamento e acabamento resistente ao tempo.',
+          },
+        },
+      ],
+    })} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Apply theme before paint to avoid flash -->
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light') document.documentElement.classList.add('light');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-ink-900 text-cream-50 antialiased">
+    <slot />
+
+    <script>
+      // Smooth reveal observer
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('reveal-in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    </script>
+
+    <style is:global>
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      [data-reveal].reveal-in {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </body>
+</html>
