@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-Acesse `http://localhost:4321`.
+Acesse [http://localhost:4321](http://localhost:4321).
 
 ## Build
 
